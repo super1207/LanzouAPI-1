@@ -85,10 +85,12 @@ if(strstr($softInfo, "function down_p(){") != false){
 			, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
 		);
 	}
+	preg_match_all("~sg = \'(.*?)\'~", $softInfo, $segment);
+        $sign = $segment[1][0];
 	preg_match("~'action=(.*?)&sign=(.*?)&p='\+(.*?),~", $softInfo, $segment);
 	$post_data = array(
 		"action" => $segment[1],
-		"sign" => $segment[2],
+		"sign" => $sign,
 		"p" => $pwd
 	);
 	$softInfo = MloocCurlPost($post_data, "https://www.lanzous.com/ajaxm.php", $url,$UserAgent);
