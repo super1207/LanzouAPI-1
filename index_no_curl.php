@@ -47,7 +47,7 @@ function gerUrlFromPage($urlPage)
             $tempStr = explode("=",$tempStr)[1];
             $cdomain = $tempStr;
         }
-        if(!(strpos($v,"submit.href = domianload") === FALSE)){
+        if(!(strpos($v,"var downloads =") === FALSE)){
             $tempStr  = str_replace(" ","",$v);
             $tempStr = str_replace("'","",$tempStr);
             $tempStr = str_replace(";","",$tempStr);
