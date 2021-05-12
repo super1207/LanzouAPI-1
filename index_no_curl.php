@@ -67,7 +67,7 @@ function gerUrlFromPage($urlPage)
 
 function getLanzousUrl($sharedUrl)
 {
-    if(strpos($sharedUrl,".lanzous.com") === FALSE){
+    if(strpos($sharedUrl,".lanzous.com") === FALSE && strpos($sharedUrl,".lanzoux.com") === FALSE){
         return array("retCode" => -1,"retStr" => "It is not lanzous shared url");
     }
     if(strpos($sharedUrl,"com/tp/") === FALSE){
