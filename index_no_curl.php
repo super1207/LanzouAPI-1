@@ -115,7 +115,7 @@ if(array_key_exists("url",$_GET))
 	}
 }else{	
 	echo "this is a lanzou's download help tool,example usage:<br />";
-	$method = $_SERVER['HTTP_HOST'].phpSelf()."?url=https://wwa.lanzous.com/iPHgRfi417a"."<br />";
+	$method = $_SERVER['HTTP_HOST'].phpSelf()."?url=https://wwa.lanzoux.com/iPHgRfi417a"."<br />";
 	if(!isHttps()){
 		echo "http://".$method;
 	}else{
